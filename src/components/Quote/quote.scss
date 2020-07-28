@@ -27,7 +27,27 @@
       border-radius: 0px 0px 10px 10px;
       display: flex;
       height: 30%;
-      justify-content: center;
+      justify-content: space-around;
+
+      &-author {
+        font-style: italic;
+      }
+      &-likes {
+        & button  {
+          background-color: $primary;
+          color: $quasi-white;
+          font-family: 'Montserrat';
+          font-weight: 300;
+          padding: .7em 1.2em;
+
+          & .icon {
+            margin-right: 5px !important;
+          }
+          & .icon--liked {
+            color: #f44336;
+          }
+        }
+      } 
     }
   }
 
@@ -40,13 +60,27 @@
   }
   blockquote:before {
     content: "“";
-    left: 1.5rem;
-    top: .2rem;
+    left: 1rem;
+    top: 3.5rem;
   }
   blockquote:after {
     content: "„";
-    right: 2.5rem;
-    bottom: 12.5rem;
+    right: 2rem;
+    bottom: 10rem;
   }
 
+}
+
+@media (max-width: 768px) {
+  #quote {
+    & .quote {
+      border-radius: 10px;
+      background-color: rgba(255,255,255,.5);
+      backdrop-filter: blur(7px);
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Montserrat';
+      height: 40vh;
+      width: 95vw;
+    }
+  }
 }
