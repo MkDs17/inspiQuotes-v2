@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './app.scss';
 
 import Background from '../Background';
 import Quote from '../Quote';
 
+import quotes from '../../data/quotes';
+
 function App() {
-  const quote = {
-    id: 1,
-    text: 'Change your life, learn to code',
-    author: 'Anonymous',
-    likes: new Date().getFullYear(),
-  };
+  const [quoteToShow, setQuoteToShow] = useState({});
+
+  useEffect(() => {
+    setQuoteToShow(quotes[2]);
+  });
 
   return (
     <div id="app">
       <Background />
-      <Quote quote={quote} />
+      <Quote quote={quoteToShow} />
     </div>
   );
 }

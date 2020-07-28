@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Button, Icon, Label } from 'semantic-ui-react';
@@ -7,8 +7,14 @@ import { Button, Icon, Label } from 'semantic-ui-react';
 import './quote.scss';
 
 function Quote({ quote }) {
-  const [likes, setLikes] = useState(quote.likes);
+  console.log("quoteintocomponent", quote);
+  
   const [heartLiked, setHeartLiked] = useState(false);
+  const [likes, setLikes] = useState();
+
+  useEffect(() => {
+    setLikes(quote.likes);
+  }, [quote]);
 
   const likingQuote = () => {
     setHeartLiked(!heartLiked);
@@ -24,7 +30,7 @@ function Quote({ quote }) {
   const heartClassname = classNames(
     {
       'icon--liked': heartLiked,
-    }
+    },
   );
 
   return (
@@ -42,7 +48,8 @@ function Quote({ quote }) {
                 Likes
               </Button>
               <Label as="a" basic pointing="left">
-                {likes.toLocaleString('fr-FR')}
+                {/*likes.toLocaleString('fr-FR')*/}
+                {likes}
               </Label>
             </Button>
           </div>
@@ -54,11 +61,19 @@ function Quote({ quote }) {
 
 Quote.propTypes = {
   quote: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    text: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired,
-  }).isRequired,
+    id: PropTypes.number,
+    text: PropTypes.string,
+    author: PropTypes.string,
+    likes: PropTypes.number,
+  }),
+};
+Quote.defaultProps = {
+  quote: PropTypes.shape({
+    id: 1,
+    text: 'Change your life, learn to code',
+    author: 'Anonymous',
+    likes: new Date().getFullYear(),
+  }),
 };
 
 export default Quote;
