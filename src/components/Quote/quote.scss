@@ -1,0 +1,52 @@
+@import 'src/styles/vars';
+
+#quote {
+  position: absolute;
+  z-index: 1;
+  
+  & .quote {
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.5);
+    backdrop-filter: blur(7px);
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Montserrat';
+    height: 30vh;
+    width: 50vw;
+
+    &-content {
+      align-items: center;
+      display: flex;
+      
+      font-size: 1.2em;
+      height: 70%;
+      justify-content: center;
+    }
+    &-infos {
+      align-items: center;
+      background-color: rgba(255,255,255,.2);
+      border-radius: 0px 0px 10px 10px;
+      display: flex;
+      height: 30%;
+      justify-content: center;
+    }
+  }
+
+  blockquote:before, blockquote:after {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 8rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  blockquote:before {
+    content: "“";
+    left: 1.5rem;
+    top: .2rem;
+  }
+  blockquote:after {
+    content: "„";
+    right: 2.5rem;
+    bottom: 12.5rem;
+  }
+
+}
