@@ -1,32 +1,27 @@
 @import 'src/styles/vars';
 
-#background {
+.background {
   width: 100%;
+  margin: auto;
+  position: relative;
 
-  .background {
-    width: 100%;
-    margin: auto;
-    position: relative;
+  &-each-fade {
+    &-image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
 
-    &-each-fade {
-      &-image {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      &-options {
+        width: 100%; 
+        height: 100%;
         background-size: cover;
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
-  
-        &-options {
-          width: 100%; 
-          height: 100%;
-          background-size: cover;
-          background-position: center;
-        }
+        background-position: center;
       }
     }
   }
-  
 }

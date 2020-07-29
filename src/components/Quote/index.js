@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Button, Icon, Label } from 'semantic-ui-react';
 
-
 import './quote.scss';
 
-function Quote({ quote }) {
+const Quote = ({ quote }) => {
   const [heartLiked, setHeartLiked] = useState(false);
   const [likes, setLikes] = useState();
 
@@ -32,30 +31,28 @@ function Quote({ quote }) {
   );
 
   return (
-    <div id="quote">
-      <div key={quote.id} className="quote">
-        <div className="quote-content">
-          <blockquote>{quote.text}</blockquote>
-        </div>
-        <div className="quote-infos">
-          <div className="quote-infos-author">- {quote.author} -</div>
-          <div className="quote-infos-likes">
-            <Button as="div" labelPosition="right">
-              <Button onClick={likingQuote} icon>
-                <Icon name="heart" className={heartClassname} />
-                Likes
-              </Button>
-              <Label as="a" basic pointing="left">
-                {/*likes.toLocaleString('fr-FR')*/}
-                {likes}
-              </Label>
+    <div className="quote">
+      <div className="quote-content">
+        <blockquote>{quote.text}</blockquote>
+      </div>
+      <div className="quote-infos">
+        <div className="quote-infos-author">- {quote.author} -</div>
+        <div className="quote-infos-likes">
+          <Button as="div" labelPosition="right">
+            <Button onClick={likingQuote} icon>
+              <Icon name="heart" className={heartClassname} />
+              Likes
             </Button>
-          </div>
+            <Label as="a" basic pointing="left">
+              {/*likes.toLocaleString('fr-FR')*/}
+              {likes}
+            </Label>
+          </Button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 Quote.propTypes = {
   quote: PropTypes.shape({

@@ -1,75 +1,72 @@
 @import 'src/styles/vars';
 
-#quote {
+.quote {
+  border-radius: 10px;
+  background-color: rgba(255,255,255,.5);
+  backdrop-filter: blur(7px);
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Montserrat';
+  height: 30vh;
+  width: 50vw;
+
   position: absolute;
-  z-index: 1;
-  
-  & .quote {
-    border-radius: 10px;
-    background-color: rgba(255,255,255,.5);
-    backdrop-filter: blur(7px);
-    color: rgba(0, 0, 0, 0.7);
-    font-family: 'Montserrat';
-    height: 30vh;
-    width: 50vw;
 
-    &-content {
-      align-items: center;
-      display: flex;
-      padding: 0 1em;
-      
-      font-size: 1.2em;
-      height: 70%;
-      justify-content: center;
+  &-content {
+    align-items: center;
+    display: flex;
+    padding: 0 1em;
+    
+    font-size: 1.2em;
+    height: 70%;
+    justify-content: center;
+  }
+  &-infos {
+    align-items: center;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    height: 30%;
+    justify-content: space-around;
+
+    &-author {
+      font-style: italic;
     }
-    &-infos {
-      align-items: center;
-      background-color: rgba(255,255,255,.2);
-      border-radius: 0px 0px 10px 10px;
-      display: flex;
-      height: 30%;
-      justify-content: space-around;
+    &-likes {
+      & button  {
+        background-color: $primary;
+        color: $quasi-white;
+        font-family: 'Montserrat';
+        font-weight: 300;
+        padding: .7em 1.2em;
 
-      &-author {
-        font-style: italic;
-      }
-      &-likes {
-        & button  {
-          background-color: $primary;
-          color: $quasi-white;
-          font-family: 'Montserrat';
-          font-weight: 300;
-          padding: .7em 1.2em;
-
-          & .icon {
-            margin-right: 5px !important;
-          }
-          & .icon--liked {
-            color: #f44336;
-          }
+        & .icon {
+          margin-right: 5px !important;
         }
-      } 
-    }
+        & .icon--liked {
+          color: #f44336;
+        }
+      }
+    } 
   }
+}
+  
 
-  blockquote:before, blockquote:after {
-    position: absolute;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 8rem;
-    width: 2rem;
-    height: 2rem;
-  }
-  blockquote:before {
-    content: "“";
-    left: 1rem;
-    top: 3.5rem;
-  }
-  blockquote:after {
-    content: "„";
-    right: 2rem;
-    bottom: 10rem;
-  }
-
+blockquote:before, blockquote:after {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 8rem;
+  width: 2rem;
+  height: 2rem;
+}
+blockquote:before {
+  content: "“";
+  left: 1rem;
+  top: 3.5rem;
+}
+blockquote:after {
+  content: "„";
+  right: 2rem;
+  bottom: 10rem;
 }
 
 @media (max-width: 768px) {

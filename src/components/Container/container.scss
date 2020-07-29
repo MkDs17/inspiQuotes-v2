@@ -1,0 +1,14 @@
+@import 'src/styles/vars';
+
+.slide-container {
+  position: absolute;
+  width: 100%;
+
+  & .each-fade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
