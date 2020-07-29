@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import _ from 'lodash';
 
 import './app.scss';
 
@@ -11,8 +12,18 @@ function App() {
   const [quoteToShow, setQuoteToShow] = useState({});
 
   useEffect(() => {
-    setQuoteToShow(quotes[2]);
-  });
+    setQuoteToShow(quotes[0]);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomNumber = _.random(0, (quotes.length - 1));
+      setQuoteToShow(quotes[randomNumber]);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  console.log('quotes.length', quotes.length);
 
   return (
     <div id="app">

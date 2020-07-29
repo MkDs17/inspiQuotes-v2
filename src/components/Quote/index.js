@@ -7,8 +7,6 @@ import { Button, Icon, Label } from 'semantic-ui-react';
 import './quote.scss';
 
 function Quote({ quote }) {
-  console.log("quoteintocomponent", quote);
-  
   const [heartLiked, setHeartLiked] = useState(false);
   const [likes, setLikes] = useState();
 
