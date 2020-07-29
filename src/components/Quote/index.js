@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Button, Icon, Label } from 'semantic-ui-react';
 
-
 import './quote.scss';
 
-function Quote({ quote }) {
+const Quote = ({ quote }) => {
   const [heartLiked, setHeartLiked] = useState(false);
   const [likes, setLikes] = useState();
 
@@ -33,7 +32,7 @@ function Quote({ quote }) {
 
   return (
     <div id="quote">
-      <div key={quote.id} className="quote">
+      <div className="quote">
         <div className="quote-content">
           <blockquote>{quote.text}</blockquote>
         </div>
@@ -46,7 +45,6 @@ function Quote({ quote }) {
                 Likes
               </Button>
               <Label as="a" basic pointing="left">
-                {/*likes.toLocaleString('fr-FR')*/}
                 {likes}
               </Label>
             </Button>
@@ -55,7 +53,7 @@ function Quote({ quote }) {
       </div>
     </div>
   );
-}
+};
 
 Quote.propTypes = {
   quote: PropTypes.shape({
@@ -70,7 +68,7 @@ Quote.defaultProps = {
     id: 1,
     text: 'Change your life, learn to code',
     author: 'Anonymous',
-    likes: new Date().getFullYear(),
+    likes: 22,
   }),
 };
 

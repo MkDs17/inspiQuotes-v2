@@ -1,0 +1,39 @@
+@import 'src/styles/vars';
+
+.header {
+  position: absolute;
+  font-family: 'Montserrat';  
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0, .7);
+  width: 100%;
+
+  &-title {
+    font-weight: 900;
+    font-size: 3em;
+    margin-bottom: .05em;
+
+    & img {
+      margin-left: .2em;
+      width: 25px;
+      height: auto;
+    }
+  }
+  &-subtitle {
+    font-weight: 900;
+    font-size: 1.3em;
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: .8em;
+  }
+}

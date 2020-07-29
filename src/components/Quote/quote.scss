@@ -2,34 +2,26 @@
 
 #quote {
   position: absolute;
-  z-index: 1;
-  
-  & .quote {
-    border-radius: 10px;
-    background-color: rgba(255,255,255,.5);
-    backdrop-filter: blur(7px);
-    color: rgba(0, 0, 0, 0.7);
-    font-family: 'Montserrat';
+  .quote {
     height: 30vh;
     width: 50vw;
-
+  
     &-content {
       align-items: center;
       display: flex;
       padding: 0 1em;
-      
       font-size: 1.2em;
-      height: 70%;
+      height: 80%;
       justify-content: center;
     }
     &-infos {
       align-items: center;
-      background-color: rgba(255,255,255,.2);
+      background-color: rgba(255,255,255,.3);
       border-radius: 0px 0px 10px 10px;
       display: flex;
-      height: 30%;
+      height: 20%;
       justify-content: space-around;
-
+  
       &-author {
         font-style: italic;
       }
@@ -40,7 +32,7 @@
           font-family: 'Montserrat';
           font-weight: 300;
           padding: .7em 1.2em;
-
+  
           & .icon {
             margin-right: 5px !important;
           }
@@ -51,37 +43,43 @@
       } 
     }
   }
+}
 
-  blockquote:before, blockquote:after {
-    position: absolute;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 8rem;
-    width: 2rem;
-    height: 2rem;
-  }
-  blockquote:before {
-    content: "“";
-    left: 1rem;
-    top: 3.5rem;
-  }
-  blockquote:after {
-    content: "„";
-    right: 2rem;
-    bottom: 10rem;
-  }
-
+blockquote:before, blockquote:after {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 8rem;
+  width: 2rem;
+  height: 2rem;
+}
+blockquote:before {
+  content: "“";
+  left: 1rem;
+  top: 3.5rem;
+}
+blockquote:after {
+  content: "„";
+  right: 2rem;
+  bottom: 10rem;
 }
 
 @media (max-width: 768px) {
   #quote {
     & .quote {
-      border-radius: 10px;
-      background-color: rgba(255,255,255,.5);
-      backdrop-filter: blur(7px);
-      color: rgba(0, 0, 0, 0.7);
-      font-family: 'Montserrat';
       height: 40vh;
       width: 95vw;
+
+      &-infos {
+        &-likes {
+          & button {
+            font-size: .9em;
+            padding: .7em 1.2em;
+          }
+          & a {
+            font-size: .9em;
+          }
+        }
+      }
     }
   }
 }
