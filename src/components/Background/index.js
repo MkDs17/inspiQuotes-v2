@@ -8,8 +8,8 @@ import pictures from '../../data/pictures';
 const Background = () => {
   const fadeProperties = {
     arrows: false,
-    duration: 5000,
-    transitionDuration: 1500,
+    duration: 10000,
+    transitionDuration: 1250,
     infinite: true,
     indicators: false,
   };
@@ -20,7 +20,7 @@ const Background = () => {
         {pictures.map((picture) => (
           <div key={picture.id} className="background-each-fade">
             <div className="background-each-fade-image">
-              <div className="background-each-fade-image-options" style={{'backgroundImage': `linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .2) ), url(src/public/assets/img/${picture.src})`}} />
+              <div className="background-each-fade-image-options" style={{'backgroundImage': `linear-gradient( rgba(255, 255, 255, .5), rgba(255, 255, 255, .3) ), url(src/public/assets/img/${picture.src})`}} />
             </div>
           </div>
         ))}

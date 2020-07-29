@@ -1,55 +1,49 @@
 @import 'src/styles/vars';
 
-.quote {
-  border-radius: 10px;
-  background-color: rgba(255,255,255,.5);
-  backdrop-filter: blur(7px);
-  color: rgba(0, 0, 0, 0.7);
-  font-family: 'Montserrat';
-  height: 30vh;
-  width: 50vw;
-
+#quote {
   position: absolute;
-
-  &-content {
-    align-items: center;
-    display: flex;
-    padding: 0 1em;
-    
-    font-size: 1.2em;
-    height: 70%;
-    justify-content: center;
-  }
-  &-infos {
-    align-items: center;
-    background-color: rgba(255,255,255,.2);
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    height: 30%;
-    justify-content: space-around;
-
-    &-author {
-      font-style: italic;
+  .quote {
+    height: 30vh;
+    width: 50vw;
+  
+    &-content {
+      align-items: center;
+      display: flex;
+      padding: 0 1em;
+      font-size: 1.2em;
+      height: 80%;
+      justify-content: center;
     }
-    &-likes {
-      & button  {
-        background-color: $primary;
-        color: $quasi-white;
-        font-family: 'Montserrat';
-        font-weight: 300;
-        padding: .7em 1.2em;
-
-        & .icon {
-          margin-right: 5px !important;
-        }
-        & .icon--liked {
-          color: #f44336;
-        }
+    &-infos {
+      align-items: center;
+      background-color: rgba(255,255,255,.3);
+      border-radius: 0px 0px 10px 10px;
+      display: flex;
+      height: 20%;
+      justify-content: space-around;
+  
+      &-author {
+        font-style: italic;
       }
-    } 
+      &-likes {
+        & button  {
+          background-color: $primary;
+          color: $quasi-white;
+          font-family: 'Montserrat';
+          font-weight: 300;
+          padding: .7em 1.2em;
+  
+          & .icon {
+            margin-right: 5px !important;
+          }
+          & .icon--liked {
+            color: #f44336;
+          }
+        }
+      } 
+    }
   }
 }
-  
 
 blockquote:before, blockquote:after {
   position: absolute;
@@ -72,13 +66,20 @@ blockquote:after {
 @media (max-width: 768px) {
   #quote {
     & .quote {
-      border-radius: 10px;
-      background-color: rgba(255,255,255,.5);
-      backdrop-filter: blur(7px);
-      color: rgba(0, 0, 0, 0.7);
-      font-family: 'Montserrat';
       height: 40vh;
       width: 95vw;
+
+      &-infos {
+        &-likes {
+          & button {
+            font-size: .9em;
+            padding: .7em 1.2em;
+          }
+          & a {
+            font-size: .9em;
+          }
+        }
+      }
     }
   }
 }

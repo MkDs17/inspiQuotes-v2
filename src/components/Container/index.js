@@ -26,22 +26,24 @@ const Container = () => {
 
   const fadeProperties = {
     arrows: false,
-    duration: 5000,
-    transitionDuration: 1500,
+    duration: 10000,
+    transitionDuration: 1250,
     infinite: true,
     indicators: false,
     pauseOnHover: false,
   };
 
   return (
-    <div className="slide-container">
-      <Fade {...fadeProperties}>
-        {quotes.map((quote) => (
-          <div key={quote.id} className="each-fade">
-            <Quote quote={quote} />
-          </div>
-        ))}
-      </Fade>
+    <div className="slide-full-width-container">
+      <div className="container">
+        <Fade {...fadeProperties}>
+          {quotes.map((quote) => (
+            <div key={quote.id} className="each-fade">
+              <Quote quote={quote} />
+            </div>
+          ))}
+        </Fade>
+      </div>
     </div>
   );
 };

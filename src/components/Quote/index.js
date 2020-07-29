@@ -31,23 +31,24 @@ const Quote = ({ quote }) => {
   );
 
   return (
-    <div className="quote">
-      <div className="quote-content">
-        <blockquote>{quote.text}</blockquote>
-      </div>
-      <div className="quote-infos">
-        <div className="quote-infos-author">- {quote.author} -</div>
-        <div className="quote-infos-likes">
-          <Button as="div" labelPosition="right">
-            <Button onClick={likingQuote} icon>
-              <Icon name="heart" className={heartClassname} />
-              Likes
+    <div id="quote">
+      <div className="quote">
+        <div className="quote-content">
+          <blockquote>{quote.text}</blockquote>
+        </div>
+        <div className="quote-infos">
+          <div className="quote-infos-author">- {quote.author} -</div>
+          <div className="quote-infos-likes">
+            <Button as="div" labelPosition="right">
+              <Button onClick={likingQuote} icon>
+                <Icon name="heart" className={heartClassname} />
+                Likes
+              </Button>
+              <Label as="a" basic pointing="left">
+                {likes}
+              </Label>
             </Button>
-            <Label as="a" basic pointing="left">
-              {/*likes.toLocaleString('fr-FR')*/}
-              {likes}
-            </Label>
-          </Button>
+          </div>
         </div>
       </div>
     </div>
@@ -67,7 +68,7 @@ Quote.defaultProps = {
     id: 1,
     text: 'Change your life, learn to code',
     author: 'Anonymous',
-    likes: new Date().getFullYear(),
+    likes: 22,
   }),
 };
 
