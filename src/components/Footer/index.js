@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-links">
-        <a className="footer-links-github" href="https://github.com/MkDs17"><FaGithub /></a>
-        <a className="footer-links-twitter" href="http://twitter.com/MkDesign14"><FaTwitter /></a>
-        <a className="footer-links-linkedin" href="http://linkedin.com/in/mickael-rassicot"><FaLinkedin /></a>
+        <a aria-label="Github Link" className="footer-links-github" href="https://github.com/MkDs17"><FaGithub /></a>
+        <a aria-label="Twitter Link" className="footer-links-twitter" href="http://twitter.com/MkDesign14"><FaTwitter /></a>
+        <a aria-label="LinkedIn Link" className="footer-links-linkedin" href="http://linkedin.com/in/mickael-rassicot"><FaLinkedin /></a>
       </div>
       <div className="footer-catch-phrase">
         Stay tuned
