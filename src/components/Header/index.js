@@ -8,11 +8,13 @@ const Header = () => {
     <div className="header">
       <div>
         <div className="header-title">
-          InspiQuotes
-          <img src={logo} alt="inspiquote logo" />
+          <h1>
+            InspiQuotes
+            <img src={logo} alt="inspiquote logo" />
+          </h1>
         </div>
         <div className="header-subtitle">
-          · Free your mind ·
+          <h2> · Free your mind ·</h2>
         </div>
       </div>
     </div>

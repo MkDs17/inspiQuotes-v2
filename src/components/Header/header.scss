@@ -14,10 +14,19 @@
   color: rgba(0,0,0, .7);
   width: 100%;
 
-  &-title {
+  & h1, h2 {
+    font-family: inherit;
+    line-height: inherit;
+    margin: inherit;
+    font-weight: inherit;
+    padding: inherit;
+  }
+
+  &-title h1 {
     font-weight: 900;
     font-size: 3em;
     margin-bottom: .05em;
+
 
     & img {
       margin-left: .2em;
@@ -25,7 +34,7 @@
       height: auto;
     }
   }
-  &-subtitle {
+  &-subtitle h2 {
     font-weight: 900;
     font-size: 1.3em;
     text-align: right;
