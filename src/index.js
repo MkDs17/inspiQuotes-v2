@@ -5,7 +5,6 @@ import 'src/styles/index.scss';
 
 // External Lib
 import 'semantic-ui-css/semantic.min.css';
-import 'emoji-mart/css/emoji-mart.css';
 import 'react-slideshow-image/dist/styles.css';
 
 import App from 'src/components/App';
