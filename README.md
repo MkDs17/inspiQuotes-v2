@@ -1,6 +1,6 @@
 # InspiQuotes v2
 
-![alt Gif du projet InspiQuotesv2](src/public/assets/img/inspiQuotesv2.png)
+![alt Gif du projet InspiQuotesv2](src/public/assets/img/inspiQuotes.png)
 
 ## What's this ?
 Creation of a page showing different inspirational quotes
