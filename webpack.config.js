@@ -124,17 +124,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.html$/,
-        use: [
-          // ...The other file-loader and extract-loader go here.
-          {
-            loader: 'html-loader',
-            options: {
-              // THIS will resolve relative URLs to reference from the app/ directory
-              root: path.resolve(__dirname, 'src'),
-            },
-          },
-        ],
+        test: /\.html$/i,
+        use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
       },
     ],
   },
