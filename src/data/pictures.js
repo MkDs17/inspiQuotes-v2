@@ -1,4 +1,8 @@
-
+import bg from '../public/assets/img/bg.jpg';
+import bg1 from '../public/assets/img/bg1.jpg';
+import bg2 from '../public/assets/img/bg2.jpg';
+import bg3 from '../public/assets/img/bg3.jpg';
+import bg4 from '../public/assets/img/bg4.jpg';
 
 export default [
   {
