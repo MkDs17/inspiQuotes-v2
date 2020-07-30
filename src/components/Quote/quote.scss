@@ -61,7 +61,7 @@ blockquote:before {
 blockquote:after {
   content: "„";
   right: 2rem;
-  bottom: 10rem;
+  bottom: 7.5rem;
 }
 
 @media (max-width: 768px) {
@@ -83,6 +83,11 @@ blockquote:after {
       }
     }
   }
+  blockquote:after {
+    content: "„";
+    right: 2rem;
+    bottom: 8.5rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -103,5 +108,10 @@ blockquote:after {
         }
       }
     }
+  }
+  blockquote:after {
+    content: "„";
+    right: 2rem;
+    bottom: 8.5rem;
   }
 }
