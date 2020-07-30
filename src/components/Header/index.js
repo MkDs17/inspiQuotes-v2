@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../public/assets/img/logo.png';
 
 import './header.scss';
 
@@ -8,7 +9,7 @@ const Header = () => {
       <div>
         <div className="header-title">
           InspiQuotes
-          <img src="/public/assets/img/logo.png" alt="inspiquote logo" />
+          <img src={logo} alt="inspiquote logo" />
         </div>
         <div className="header-subtitle">
           · Free your mind ·
