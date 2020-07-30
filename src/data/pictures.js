@@ -1,22 +1,24 @@
+
+
 export default [
   {
     id: 1,
-    src: 'bg.jpg',
+    src: bg,
   },
   {
     id: 2,
-    src: 'bg1.jpg',
+    src: bg1,
   },
   {
     id: 3,
-    src: 'bg2.jpg',
+    src: bg2,
   },
   {
     id: 4,
-    src: 'bg3.jpg',
+    src: bg3,
   },
   {
     id: 5,
-    src: 'bg4.jpg',
+    src: bg4,
   },
 ];
