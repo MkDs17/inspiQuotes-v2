@@ -30,7 +30,17 @@
   .slide-full-width-container {
     & .container {
       height: 40vh;
-      width: 95vw;
+      width: 80vw;
+      font-size: .8em;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slide-full-width-container {
+    & .container {
+      height: 40vh;
+      width: 65vw;
       font-size: .8em;
     }
   }
