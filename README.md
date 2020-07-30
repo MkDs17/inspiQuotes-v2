@@ -1,5 +1,7 @@
 # InspiQuotes v2
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2eac35e-7290-454d-b309-ac3c20b0c23b/deploy-status)](https://app.netlify.com/sites/inspiquotesv2/deploys)
+
 ![alt Gif du projet InspiQuotesv2](src/public/assets/img/inspiquotes.png)
 
 ## What's this ?
