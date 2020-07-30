@@ -8,7 +8,7 @@ const Header = () => {
       <div>
         <div className="header-title">
           InspiQuotes
-          <img src="src/public/assets/img/logov2.png" alt="inspiquote logo" />
+          <img src="/src/public/assets/img/logov2.png" alt="inspiquote logo" />
         </div>
         <div className="header-subtitle">
           · Free your mind ·
