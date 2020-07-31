@@ -18,7 +18,8 @@ module.exports = {
   // Passe le build par dèfaut en déeveloppement
   mode: 'development',
   // Source maps
-  devtool: 'eval-source-map',
+  devtool: '',
+  // devtool: 'eval-source-map',
   // Expose le dossier src/ pour les imports
   resolve: {
     alias: {
