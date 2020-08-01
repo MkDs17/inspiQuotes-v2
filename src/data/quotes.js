@@ -41,4 +41,22 @@ export default [
     author: 'George Bernard Shaw',
     likes: 24,
   },
+  {
+    id: 8,
+    text: 'Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.',
+    author: 'Mark Twain',
+    likes: 42,
+  },
+  {
+    id: 9,
+    text: 'When you try to control everything, you enjoy nothing. Sometimes you just need to relax, breathe, let go and live in the moment.',
+    author: 'Unknown',
+    likes: 24,
+  },
+  {
+    id: 10,
+    text: 'Self-confidence is the most attractive quality a person can have. How can anyone see how great you are if you can\'t see it yourself?',
+    author: 'Unknown',
+    likes: 42,
+  },
 ];
