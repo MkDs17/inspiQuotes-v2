@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Fade } from 'react-slideshow-image';
 
 import './container.scss';
@@ -8,6 +8,15 @@ import Quote from '../Quote';
 import quotes from '../../data/quotes';
 
 const Container = () => {
+  const [quotesToShow, setQuotesToShow] = useState([]);
+
+  useEffect(() => {
+    if (quotes !== undefined) {
+      const randomlyQuotes = quotes.sort((quote) => Math.random(quote.id) - 0.5);
+      setQuotesToShow(randomlyQuotes);
+    }
+  }, []);
+
   const fadeProperties = {
     arrows: false,
     duration: 10000,
@@ -21,7 +30,7 @@ const Container = () => {
     <div className="slide-full-width-container">
       <div className="container">
         <Fade {...fadeProperties}>
-          {quotes.map((quote) => (
+          {quotesToShow.map((quote) => (
             <div key={quote.id} className="each-fade">
               <Quote quote={quote} />
             </div>
